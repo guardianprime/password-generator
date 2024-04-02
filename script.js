@@ -1,12 +1,13 @@
 const btnEl = document.querySelector(".btn")
-const inputEl = document.getElementById("input")
-const iconEl = document.querySelector(".fa-copy")
+const inputEl = document.querySelector(".input")
+const copyIconEl = document.querySelector(".fa-copy")
 const alertContainerEl = document.querySelector(".alert-container")
+
 btnEl.addEventListener("click", () => {
-    createPassword()
+    generatePassword()
 })
 
-iconEl.addEventListener("click", () => {
+copyIconEl.addEventListener("click", () => {
     copyPassword()
     if (inputEl.value) {
         alertContainerEl.classList.remove("active")
@@ -15,16 +16,18 @@ iconEl.addEventListener("click", () => {
         }, 2000);
     }
 })
-function createPassword() {
-    const chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+{}[]?:<>ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    const passwordLength = 16
+function generatePassword() {
+    const char = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*(){}[]?|/"
     let password = ""
-    for (let index = 0; index < passwordLength; index++) {
-        const randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber + 1)
+    const passwordLength = 16
+
+    for (let i = 0; i < passwordLength; i++) {
+        const randomNumber = Math.floor(Math.random() * char.length)
+        password += char.substring(randomNumber, randomNumber + 1)
+        console.log(randomNumber, password)
     }
     inputEl.value = password
-    alertContainerEl.innerText = password + " Copied!"
+    alertContainerEl.innerText = `${password} Copied!`
 }
 
 function copyPassword() {
