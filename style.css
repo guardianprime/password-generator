@@ -10,10 +10,12 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("background2.jpg");
+  background-size: cover;
 }
 
 .container {
-  background-color: grey;
+  background-color: rgba(76, 69, 19, 0.762);
   width: 500px;
   text-align: center;
   padding: 10px;
@@ -22,7 +24,7 @@ body {
 }
 
 .input-container {
-  background-color: pink;
+  background-color: rgba(28, 48, 16, 0.606);
   margin: 10px auto;
   width: 80%;
   padding: 10px;
@@ -32,12 +34,18 @@ body {
   justify-content: space-between;
 }
 
+h2 {
+  color: white;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 input {
   border: none;
   background-color: transparent;
   outline: none;
   font-size: 24px;
   letter-spacing: 4px;
+  color: wheat;
 }
 
 input::placeholder {
@@ -47,6 +55,7 @@ input::placeholder {
 .fa-copy {
   cursor: pointer;
   opacity: 0.3;
+  color: wheat;
 }
 
 .fa-copy:hover {
@@ -54,16 +63,16 @@ input::placeholder {
 }
 
 .btn {
-  background-color: white;
+  background-color: rgb(255, 218, 82);
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .btn:hover {
-  background-color: green;
+  background-color: rgb(205, 168, 37);
 }
 
 .btn:active {
@@ -74,7 +83,7 @@ input::placeholder {
   position: fixed;
   width: 300px;
   height: 50px;
-  background-color: lightblue;
+  background-color: rgb(255, 218, 82);
   right: 20px;
   bottom: 20px;
   border-radius: 10px;
